@@ -57,6 +57,16 @@ export default class App extends Component {
 										Username:
 										<p>{item.username}</p>
 									</div>
+
+									<div>
+										City:
+										<p>{item.address.city}</p>
+									</div>
+
+									<div>
+										ZipCode:
+										<p>{item.address.zipcode}</p>
+									</div>
 								</div>
 							</div>
 						)}
