@@ -13,7 +13,6 @@ export default class App extends Component {
 
 	componentDidMount() {
 		fetch("http://jsonplaceholder.typicode.com/users")
-			// fetch("http://jsonplaceholder.typicode.com/users")
 			.then(res => res.json())
 			.then(json => {
 				this.setState({
@@ -48,14 +47,19 @@ export default class App extends Component {
 										ID:<p> {item.id}</p>
 									</div>
 									<div>
-										nombre:<p> {item.name}</p>
+										Username:	<p>{item.username}</p>
+									</div>
+									<div>
+										Name: <p>{item.name}</p>
 									</div>
 									<div>
 										Email: <p>{item.email}</p>
 									</div>
 									<div>
-										Username:
-										<p>{item.username}</p>
+										City: <p>{item.address.city}</p>
+									</div>
+									<div>
+										Phone: <p>{item.address.phone}</p>
 									</div>
 								</div>
 							</div>
